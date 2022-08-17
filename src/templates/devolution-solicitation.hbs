@@ -1,0 +1,245 @@
+<html lang='pt-BR'>
+
+<head>
+  <meta charset='UTF-8' />
+  <meta http-equiv='X-UA-Compatible' content='IE=edge' />
+  <meta name='viewport' content='width=device-width, initial-scale=1.0' />
+  <title>Solicitação de Devolução</title>
+
+  <style>
+    body {
+      font-size: 14px;
+      margin: 0;
+      color: #646981;
+    }
+
+    h1 {
+      font-size: 20px;
+      line-height: 20px;
+    }
+
+    h2 {
+      font-size: 16px;
+      color: #4d5163;
+    }
+
+    table {
+      width: 100%;
+    }
+
+    td {
+      width: 50%;
+    }
+
+    hr {
+      background-color: #e3e3e8;
+      height:
+        1px;
+      border: none;
+      margin-top: 32px;
+      margin-bottom: 32px;
+    }
+
+    table {
+      border-collapse: collapse;
+    }
+
+    tr {
+      height: 40px;
+    }
+
+    tr:nth-child(odd) {
+      background-color: #f4f4f7;
+    }
+
+    td {
+      padding-right: 16px;
+      padding-left: 16px;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      border-radius: 4px;
+    }
+
+    td:last-child {
+      text-align: right;
+    }
+
+    .container {
+      width: 600px;
+      background-color: #f6f6f8;
+    }
+
+    .header {
+      background-color: #0D71F0;
+      color:
+        #ffffff;
+    }
+
+    .header-content {
+      font-size: 15px;
+      padding: 32px;
+    }
+
+    .top-content {
+      display: flex;
+      align-items: center;
+    }
+
+    .content {
+      background-color: #ffffff;
+      padding-left: 24px;
+      padding-right: 24px;
+      padding-top: 40px;
+      padding-bottom: 32px;
+      margin-left: 32px;
+      margin-right:
+        32px;
+      margin-top: 32px;
+      border-radius: 8px;
+    }
+
+    .payment-info {
+      margin-left:
+        28px;
+    }
+
+    .payment-total {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .payment-destak {
+      color: #646981;
+      font-weight: 700;
+    }
+
+    .payment-total-value {
+      color: #363843;
+      font-weight:
+        700;
+    }
+
+    .payment-form {
+      margin-top: 24px;
+    }
+
+    .payment-type {
+      display: flex;
+      align-items: center;
+      margin-right: 263px;
+    }
+
+    .payment-type-text {
+      margin-left: 14px;
+    }
+
+    .payment-amount {
+      padding-right: 16px;
+    }
+
+    .info {
+      background-color: #ffffff;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      padding-right: 16px;
+      padding-left: 16px;
+      margin-left: 32px;
+      margin-right: 32px;
+      margin-top: 24px;
+      margin-bottom: 24px;
+      height: 40px;
+      border-radius: 4px;
+      text-align: center;
+      box-sizing: border-box;
+      text-align: center;
+    }
+
+    .footer {
+      margin-left: 32px;
+      margin-right: 32px;
+      margin-top: 24px;
+      margin-bottom: 24px;
+      padding-bottom: 24px;
+    }
+
+    .footer-links {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .about-us-and-contact-info {
+      margin-right: 266px;
+    }
+
+    .about-us-and-contact-info span:first-child {
+      margin-right: 26px;
+    }
+
+
+    .footer hr {
+      background-color: #ebebf0;
+    }
+
+    .footer p {
+      line-height: 8px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class='container'>
+    <div class='header'>
+      <div class='header-content'>
+        <h1>Solicitação de Devolução de Assistência</h1>
+      </div>
+    </div>
+
+    <div class='content'>
+      <div class='payment-details'>
+        <h2>Dados da solicitação</h2>
+
+        <table>
+          <tr>
+            <td>Número Nota</td>
+            <td class='payment-destak'>invoice_number</td>
+          </tr>
+          <tr>
+            <td>Produto</td>
+            <td>product_description</td>
+          </tr>
+          <tr>
+            <td>Marca</td>
+            <td>product_brand</td>
+          </tr>
+          <tr>
+            <td>Quantidade</td>
+            <td>{{quantity}}un</td>
+          </tr>
+          <tr>
+            <td>Motivo</td>
+            <td>{{reason}}</td>
+          </tr>
+        </table>
+        <h3>Observação</h3>
+        <p>{{observation}}</p>
+      </div>
+    </div>
+
+    <div class='info'>
+      Aprovação disponível no aplicativo.
+    </div>
+
+    <div class='footer'>
+      <div class='business-info'>
+        <p>
+          GAZIN - ROD PR 082 SN - Centro | CEP: 87485000 - Douradina/PR
+        </p>
+        <p>CNPJ - 11.760.553/0001-69</p>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
