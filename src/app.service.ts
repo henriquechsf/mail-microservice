@@ -9,7 +9,7 @@ export class AppService {
   constructor(private readonly mailService: MailerService) {}
 
   async sendEmailNotification(data: any): Promise<void> {
-    const { reason, quantity, available_quantity, observation } =
+    const { invoice, product, reason, quantity, observation, created_at } =
       JSON.parse(data);
 
     const template = 'devolution-solicitation';
@@ -23,10 +23,13 @@ export class AppService {
           subject,
           template,
           context: {
+            invoice: invoice.invoice_number,
+            product: product.description,
+            brand: product.brand,
             reason,
             quantity,
-            available_quantity,
             observation,
+            created_at: new Date(created_at).toLocaleDateString(),
           },
         })
         .then((success) => {
