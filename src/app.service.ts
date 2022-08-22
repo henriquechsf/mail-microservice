@@ -24,6 +24,7 @@ export class AppService {
           template,
           context: {
             invoice: invoice.invoice_number,
+            company_branch: invoice.company_branch.description,
             product: product.description,
             brand: product.brand,
             reason,
